@@ -1,0 +1,132 @@
+.calculator {
+    width: 47rem;
+    
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #15161c;
+        border-radius: .3rem .3rem 0 0;
+        padding: .7rem 1.5rem;
+    }
+
+    &__buttons {
+        margin-bottom: .5rem;
+
+        & button {
+            padding: .7rem;
+            border-radius: 50%;
+            margin-left: .5rem;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                opacity: .8;
+            }
+
+            &:nth-child(1) {
+                background-color: #ff5555;
+            }
+
+            &:nth-child(2) {
+                background-color: #f1fa8c;
+            }
+
+            &:nth-child(3) {
+                background-color: #50fa7b;
+            }
+        }
+    }
+
+    &__undo {
+
+        & button {
+            background-color: #232530;
+            border: none;
+            color: #fff;
+            padding: .8rem 1.6rem;
+            font-weight: 500;
+            border-radius: .3rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+
+    &__more {
+
+        & button {
+            border: none;
+            background-color: #232530;
+            cursor: pointer;
+            padding: .8rem 1rem;
+            border-radius: .3rem;
+
+            &:hover {
+                opacity: .8;
+            }
+        }
+        
+        & img {
+            width: 1.3rem;
+            transform: rotate(90deg);
+        }
+    }
+
+    &__result {
+        background-color: #262833;
+        height: 15rem;
+        border-bottom: .20rem solid #1e1f29;
+    }
+
+    &__calc {
+        background-color: #282a36;
+        height: 8rem;
+    }
+
+    &__operators {
+        background-color: #1e1f29;
+        padding: 2rem;
+        display: flex;
+
+        & button {
+            width: 7rem;
+            height: 7rem;
+            border-radius: .4rem;
+            border: none;
+            background-color: #303140;
+            color: #fff;
+            cursor: pointer;
+            font-size: 2rem;
+            transition: .2s all;
+
+            &:hover {
+                background-color: #6d5890;
+            }
+        }
+    }
+
+    &__numbers {
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+        gap: .4rem;
+        flex-wrap: wrap;
+    }
+
+    &__expressions {
+        display: flex;
+        justify-content: center;
+        gap: .4rem;
+        flex-wrap: wrap;
+
+        & button:last-child {
+            background-color: #72bfd0;
+            width: 12rem;
+            height: 6rem;
+        }
+    }
+}
