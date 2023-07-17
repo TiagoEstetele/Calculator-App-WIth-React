@@ -6,7 +6,7 @@
         justify-content: space-between;
         align-items: center;
         background-color: #15161c;
-        border-radius: .3rem .3rem 0 0;
+        border-radius: 1rem 1rem 0 0;
         padding: .7rem 1.5rem;
     }
 
@@ -80,17 +80,36 @@
         background-color: #262833;
         height: 15rem;
         border-bottom: .20rem solid #1e1f29;
+        display: flex;
+        align-items: end;
+        justify-content: flex-end;
+
+        & h3 {
+            color: #fff;
+            font-size: 3rem;
+            margin: 0 2rem 1rem 0;
+        }
     }
 
     &__calc {
         background-color: #282a36;
         height: 8rem;
+        display: flex;
+        justify-content: flex-start;
+        align-items: end;
+        
+        & h2 {
+            color: #fff;
+            font-size: 4rem;
+            margin: 0 0 1rem 2rem;
+        }
     }
 
     &__operators {
         background-color: #1e1f29;
-        padding: 2rem;
+        padding: 2rem 4rem;
         display: flex;
+        border-radius: 0 0 1rem 1rem;
 
         & button {
             width: 7rem;
@@ -127,6 +146,7 @@
             background-color: #72bfd0;
             width: 12rem;
             height: 6rem;
+            margin-top: 1rem;
         }
     }
 }
