@@ -1,9 +1,10 @@
 import style from "./Calculator.module.scss";
 import moreSvg from '../../assets/img/more-svgrepo-com.svg';
 import React, { useState } from "react";
+import ReactSwitch from "react-switch";
 
 export function Calculator() {
-  var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  var numbers = [0, 3, 2, 1, 6, 5, 4, 9, 8, 7];
 
   const [num, setNum] = useState(0);
   const [oldnum, setOldNum] = useState(0);
@@ -53,14 +54,14 @@ export function Calculator() {
 
     const calculation = `${oldnum} ${operator} ${num} = ${newResult}`;
     setHistory([...history, calculation]);
-    setOldNum(newResult); // Define o resultado como o "oldnum" para continuar o cálculo
-    setNum(0); // Redefine o "num" para começar uma nova entrada numérica
+    setOldNum(newResult); 
+    setNum(0); 
   }
 
   function operatorHandler(e) {
     var operatorInput = e.target.value;
     if (showResult) {
-      // Se houver um resultado exibido, continue a partir do resultado anterior
+
       setOldNum(result);
       setNum(0);
       setShowResult(false);
@@ -73,7 +74,7 @@ export function Calculator() {
 
   return (
     <main className={style.calculator__container}>
-        <section className={style.calculator}>
+        <section className={style.calculator}>  
             <div className={style.calculator__header}>
                 <div className={style.calculator__buttons}>
                     <button></button>

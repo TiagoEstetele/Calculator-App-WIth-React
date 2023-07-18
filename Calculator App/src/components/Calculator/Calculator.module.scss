@@ -1,9 +1,11 @@
+@import '../../assets/sass/abstracts/utilities';
 
 .calculator {
-    width: 40rem;
+    width: 37rem;
 
-    @media screen and (max-width: 500px) {
+    @include max(500) {
         width: 100%;
+        transform: translateY(20%);
     }
 
     &__header {
@@ -161,6 +163,11 @@
         display: grid;
         grid-gap: .3rem;
         grid-template-columns: repeat(2, 1fr);
+
+        &:nth-child(2n + 2),
+        &:first-child {
+            grid-column: 2;
+        }
 
         & button:last-child {
             background-color: #72bfd0;         
